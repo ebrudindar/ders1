@@ -1,0 +1,94 @@
+
+<!doctype html>
+       //!Doctype html bu html kodudur.
+<html lang="tr">
+   //html dili tr
+<head>
+    <meta charset="utf-8">
+    // karakter
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    // genişlik için kendını ayarlayan *10 yapar.
+    <title>Jquery Örnekleri- Yazılım Bilişim</title>
+    // title arasında başlıktır.
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h1>Jquery Örneklerim</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="ornek_cikartma_toplama">
+            //div class(bir sınıf adı örnek_cikart_toplama)
+            <h1 class="alert-info text-center">10</h1>
+            //sınıf:ortalama yaparak 10 sayısını yazdır
+        </div>
+        <div class="ornek_cikartma_toplama">
+            <h1 class="alert-info text-center">20</h1>
+            //sınıf:ortalama yaparak 20 sayısını yazdır
+        </div>
+        <div class="ornek_cikartma_toplama">
+            <h1 class="alert-info text-center">30</h1>
+            //sınıf:ortalama yaparak 30 sayısını yazdır
+        </div>
+        <div class="ornek_cikartma_toplama">
+            <h1 class="alert-info text-center">40</h1>
+            //sınıf:ortalama yaparak 40 sayısını yazdır
+        </div>
+        <div class="ornek_cikartma_toplama">
+            <h1 class="alert-info text-center">50</h1>
+            //sınıf:ortalama yaparak 50 sayısını yazdır.
+        </div>
+        <div class="ornek_cikartma_toplama">
+            <h1 class="alert-info text-center">60</h1>
+            //sınıf:ortalama yaparak 60 sayısını yazdır.
+        </div>
+    </div>
+    <div class="row">
+        <div class="checkbox">
+            //checkbox oluşturulur.
+            <label>
+                <input type="radio" id="arti" checked name="isaret"  value="">  //labeller arasına yazdırmak radio button isim verme "toplama" seklınde yazılan bır koddur.
+                Toplama
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="radio" id="eksi" name="isaret"  value="">  //labeller arasına  yazdırmak radio button isim verme "cıkartma" seklınde yazılan bir koddur
+                Çıkartma
+            </label>
+        </div>
+        <div class="ornek_cikartma_toplama">
+            <h1 id="yaz"></h1>
+        </div>
+    </div>
+</div>
+
+
+<script  src="https://code.jquery.com/jquery-3.2.1.js"  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script>
+    //belge yüklendikten sonra çalıştırılacağını söyler
+    $(function(){
+
+        //on fonksiyonu ile belirtilen tüm nesnelere olayı dahil edilir..
+        $(".kutu h1 ").on('click',function(){
+
+            // div içindeki değerleri okumak için html() metodu kullanılır.
+            //$(this) aktif olan nesneyi ifade eder.
+            //$(this) ile tıkladığımız nesneyi seçeriz.
+            var sayi1=Number($(this).html());
+            var sayi2=Number($("#yaz").html());
+
+            /*   if($("#arti:checked").length==1) alternatif*/
+
+            if($("#arti").prop('checked')==true)
+                $("#yaz").html(sayi1+sayi2);
+            else
+                $("#yaz").html(sayi2-sayi1);
+
+        });
+    });
+</script>
+</body>
+</html>
