@@ -1,0 +1,45 @@
+
+<input type="text" id="uzunluk" placeholder="Kilometre uzunluğunu girin">
+<input type="button" value="Hesapla" id="hesapla">
+<script>
+    /* MİL=0,621.X kilometre mil formülü*/
+    function hesapla(){
+        var sayi=document.getElementById("uzunluk").value;
+        sayi=Number(sayi);
+        var mil=0.621*sayi;
+        alert(sayi+"km="+mil.toFixed(2)+"mil'dir");
+    }
+    //hesaplama yapması için hesap butonunu seçiyoruz.
+    var hesapBtn=document.getElementById("hesapla");
+    //fonksiyon bağlamak
+    hesapBtn.onclick=hesapla;
+</script>
+
+
+<input type="text" id="uzunluk2" placeholder="kilometre uzunlugunu girin">
+<input type="button" value="hesapla">
+<script>
+    function  hesapla() {
+        var sayi=document.getElementById("uzunluk").value;
+        sayi=Number(sayi);
+        var mil=0.621*sayi;
+        alert(sayi+"km="+mil.toFixed(2)+"mil'dir");
+
+    }
+    var hesapBtn=document.getElementById("hesapla");
+    hesapBtn.onclick=hesapla;
+</script>
+
+
+<input type="text" id="uzunluk3" placeholder="kilometre uzunlugunu giriniz">
+<input type="button" value="hesapla">
+<script>
+    function hesapla() {
+        var sayi=document.getElementById("uzunluk").value;
+        sayi=Number(sayi);
+        var mil=0.621*sayi;
+        alert(sayi+"km="+mil.toFixed(2)+"mil'dir");
+    }
+    var Hesaplamabutonu=document.getElementById("hesapla");
+    Hesaplamabutonu.onclick=hesapla;
+</script>
