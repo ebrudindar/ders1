@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ebru dindar</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        #kutu{
+            height: 100px;
+            width: 100px;
+            background-color: deeppink;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+<div id="kutu"></div>
+
+
+<script>
+    var x = 10, y = 10;
+    $(document).ready(function(){
+    }).keydown(function(event)
+    {
+
+        var code = (event.which) ? event.which : event.keyCode;
+        if(code == 37)
+        { x = x - 3;
+            $("#kutu").css("left", x+"px")}
+        if(code == 38)
+        { y = y - 3;
+            $("#kutu").css("top", y+"px");}
+        if(code == 39)
+        { x = x + 3;
+            $("#kutu").css("left", x+"px");}
+        if(code == 40)
+        { y = y + 3;
+            $("#kutu").css("top", y+"px");}
+    });
+</script>
+</body>
+</html>
